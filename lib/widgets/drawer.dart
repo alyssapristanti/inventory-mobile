@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:inventory/screens/inventory_form.dart';
+import 'package:inventory/screens/list_product.dart';
 import 'package:inventory/screens/menu.dart';
 
 class RightDrawer extends StatelessWidget {
@@ -62,6 +63,17 @@ class RightDrawer extends StatelessWidget {
                 ),
               );
           },
+        ),
+        ListTile(
+            leading: const Icon(Icons.shopping_basket),
+            title: const Text('Daftar Produk'),
+            onTap: () {
+                // Route menu ke halaman produk
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ProductPage()),
+                );
+            },
         ),
         ],
       ),
